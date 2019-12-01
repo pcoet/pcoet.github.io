@@ -1,0 +1,9 @@
+<div class="blog-masthead">
+  <div class="container">
+    <nav class="blog-nav">
+      {% for item in site.data.navigation %}
+        <a href="{{ item.link }}" class="blog-nav-item {% if page.url == item.link %}active{% endif %}">{{ item.name }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</div>
