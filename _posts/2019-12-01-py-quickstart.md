@@ -3,6 +3,10 @@ title: Set up a Python environment
 tags: [quickstart, Python]
 ---
 
+*Last updated: December 2, 2019*
+
+The "Getting Started" section below walks you through the process of creating a simple Python script and setting up a virtual environment to run it in. The "Things to know" section provides additional context and other tips to get you up and running with Python.
+
 ## Getting started ##
 
 1. Make sure you have Python 3 installed: `python3`

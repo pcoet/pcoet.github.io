@@ -13,25 +13,27 @@
     {% seo %}
   </head>
   <body>
-    {% include navigation.html %}
-    <div class="container">
-      <div class="blog-header">
-        <h1 class="blog-title">pcoet notes</h1>
-        <p class="lead blog-description">Note on programming, front-end development, and technical writing.</p>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 blog-main">
-          {{ content }}
-          <nav>
-            <ul class="pager">
-              <li><a href="#">Previous</a></li>
-              <li><a href="#">Next</a></li>
-            </ul>
-          </nav>
-        </div><!-- /.blog-main -->
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-    {% include footer.html %}
+    <div class="blog-page">
+      {% include navigation.html %}
+      <div class="container blog-container">
+        <div class="blog-header">
+          <h1 class="blog-title">pcoet notes</h1>
+          <p class="lead blog-description">Notes on programming, front-end development, and other technical stuff.</p>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 blog-main">
+            {{ content }}
+            <nav>
+              <ul class="pager">
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div><!-- /.blog-main -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+      {% include footer.html %}
+    </div>
     {% include scripts.html %}
   </body>
 </html>

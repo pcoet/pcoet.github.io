@@ -3,7 +3,9 @@ title: Set up a TypeScript project
 tags: [quickstart, Node, TypeScript, JavaScript]
 ---
 
-This post explains how to set up a simple TypeScript project.
+*Last updated: December 2, 2019*
+
+This post explains how to set up a basic TypeScript project. To complete the steps below, you need to [install Node.js](https://nodejs.org/en/download/). (There's a [node formula for Homebrew](https://formulae.brew.sh/formula/node), also.)
 
 1. Create a directory for your project: `mkdir <my-app>`
 1. Create a new npm package: `cd <my-app> && npm init -y`
@@ -27,14 +29,24 @@ This post explains how to set up a simple TypeScript project.
    console.log(greeter(user));
    ```
 
-1. Update **package.json** to look like this:
+1. Update the scripts sction of **package.json** to look like this:
 
    ```json
    "scripts": {
      "build": "tsc"
    },
-  ```
+   ```
 
-1. Run the TypeScript build: `npm run build`. You'll see the transpiled file, **index.js**, beside the TypeScript source file. If you open **index.js**, you'll see that the interface has been removed from the output, as expected.
+1. Open **tsconfig.json**, un-comment `"outDir"`, and point it at a **dist** directory: `"outDir": "./dist"`. Also, add an "exclude" section as a sibling of "compilerOptions", and exclude **node_modules** and **dist**:
 
-At this point, you may want to open **tsconfig.json** and configure `outDir` so that the TypeScript is built into its own directory. For example, you might set `outDir` to point at a "dist" directory. Then, if you're using Git, you can ignore the directory, ensuring that only your source files are under version control.
+   ```json
+   "exclude": [
+     "node_modules",
+     "dist"
+   ]
+   ```
+
+1. (Optional) If you're using Git, you should ignore the **dist** and **node_modules** directories, ensuring that only your source files are under version control.
+1. Run the TypeScript build: `npm run build`. You'll find a transpiled file at **dist/index.js**. If you open the file, you'll see that the interface has been removed from the output, as expected.
+
+At this point, you should have a minimal TypeScript project. To learn how to add unit tests, see [Add tests to a TypeScript project]({% post_url 2019-12-02-ts-add-tests %}).

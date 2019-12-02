@@ -9,7 +9,7 @@ I'm a programmer and technical writer based in Seattle. Currently, I'm intereste
 
 ## About the content
 
-The posts are primarily intended as documentation for tasks I've had to google one time too many. If anyone else finds them useful, better still. The tutorials assume that you're working on a Mac (or other *nix machine) and that you have some basic familiarity with a Unix environment and with the technologies being discussed. For example, the tutorials won't explain how to install Node.js and npm. The info is readily available, if you need it.
+The posts are primarily intended as documentation for tasks I've had to google one time too many. If anyone else finds them useful, better still. The tutorials assume that you're working on a Mac (or other *nix machine) and that you have some basic familiarity with a Unix environment and with standard dev tools. For example, the tutorials won't explain how to install Node.js or work with Git. The info is readily available, if you need it.
 
 ## About the title
 
