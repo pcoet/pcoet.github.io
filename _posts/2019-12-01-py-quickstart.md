@@ -1,6 +1,6 @@
 ---
 title: Set up a Python environment
-tags: [quickstart, Python]
+category: Python
 ---
 
 *Last updated: December 2, 2019*

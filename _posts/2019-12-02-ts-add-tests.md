@@ -1,6 +1,6 @@
 ---
 title: Add tests to a TypeScript project
-tags: [TypeScript, testing]
+category: TypeScript
 ---
 
 *Last updated: December 3, 2019*

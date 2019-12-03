@@ -1,6 +1,6 @@
 ---
 title: Set up a TypeScript project
-tags: [quickstart, Node, TypeScript, JavaScript]
+category: TypeScript
 ---
 
 *Last updated: December 3, 2019*
@@ -17,7 +17,7 @@ This post explains how to set up a basic TypeScript project. To complete the ste
    ```javascript
    interface Person {
      firstName: string;
-      lastName: string;
+     lastName: string;
    }
 
    function greeter(person: Person) {

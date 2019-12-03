@@ -1,6 +1,6 @@
 ---
 title: Add linting to a TypeScript project
-tags: [TypeScript, linting]
+category: TypeScript
 ---
 
 This post assumes that you've already [set up a TypeScript project]({% post_url 2019-12-01-ts-quickstart %}) and [created tests]({% post_url 2019-12-02-ts-add-tests %}).
