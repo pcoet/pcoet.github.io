@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- GitHub will set the environment to production on publish -->
+    {% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
