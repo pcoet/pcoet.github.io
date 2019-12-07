@@ -9,7 +9,7 @@ This post explains how to set up a simple TypeScript project. The first section 
 
 ## Why TypeScript?
 
-Using TypeScript for a Node.js project takes more initial set up than using the vanilla JavaScript supported by the Node runtime. So why would you want to use it?
+Using TypeScript for a Node.js project takes more initial setup than using the vanilla JavaScript supported by the Node runtime. So why would you want to use it?
 
 JavaScript is a dynamically typed language. Any type checking that gets done in JavaScript gets done at runtime, and this can be a source of bugs. TypeScript provides static typing and analysis for JavaScript. When you run the TypeScript compiler on your source code, it can find potential runtime errors before your users do.
 
@@ -33,7 +33,7 @@ To complete the steps below, you need to [install Node.js](https://nodejs.org/en
 1. Add the following code to **src/example.ts**:
 
    ```javascript
-   enum Genre {
+   export enum Genre {
      Blues,
      Country,
      Folk,
@@ -42,14 +42,14 @@ To complete the steps below, you need to [install Node.js](https://nodejs.org/en
      Soul
    }
 
-   interface Album {
+   export interface Album {
      artist: string;
      title: string;
      genre: Genre;
      year: number;
    }
 
-   function isOldTimey(album: Album) {
+   export const isOldTimey = (album: Album) => {
      const { genre, year } = album;
      return year < 1950 && (genre === Genre.Blues || genre === Genre.Country || genre === Genre.Folk);
    }
