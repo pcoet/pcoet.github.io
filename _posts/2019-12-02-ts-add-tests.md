@@ -11,8 +11,10 @@ Our source code is written in TypeScript, so we'll also use [ts-jest](https://ku
 
 ## Installing Jest
 
-1. In the root of your project, install Jest and related dependencies: `npm install --save-dev jest ts-jest @types/jest`.
-1. Create a Jest config file: `npx ts-jest config:init`. You should see a **jest.config.js** file in your root directory. If you open the file, you'll see that the preset is set to `'ts-jest'`. This is what we want.
+1. In the root of your project, install Jest and related dependencies: `npm install --save-dev jest ts-jest @types/jest`
+1. Create a Jest config file: `npx ts-jest config:init`
+
+   You should see a **jest.config.js** file in your root directory. If you open the file, you'll see that the preset is `'ts-jest'`. This is what we want.
 1. In your **package.json**, add a test script:
 
    ```json
@@ -72,8 +74,8 @@ Here we have three tests to make sure that our function returns the expected res
 
 Let's run our test: `npm run test`. 
 
-You should see the test results in the console output.
+You should see the successful test results in the console output.
 
-While we're at it, let's trying building again: `npm run build`. **example.ts** will be transpiled into **dist**, as expected, but **example.test.ts** will not.
+While we're at it, let's trying building again: `npm run build`. If you look in the **dist** dir, you'll see that **example.js** is there, as expected, but the test is not. We've excluded the test from being transpiled to the build output, as we should.
 
 Great, now we have unit testing! Finally, we'll [add linting]({% post_url 2019-12-03-ts-add-linting %}).
