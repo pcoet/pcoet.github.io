@@ -3,9 +3,9 @@ title: Vim cookbook
 category: Unix/Linux
 ---
 
-This post documents useful commands for working with the [Vim text editor](https://www.vim.org/). Some of this content is adapted from the [Vim help pages](https://vimhelp.org/). 
+*Last updated: December 7, 2019*
 
-For a better reading experience, see [Learning the vi and Vim Editors](http://shop.oreilly.com/product/9780596529833.do).
+This post documents useful commands for working with the [Vim text editor](https://www.vim.org/). Some of this content is adapted from the [Vim help pages](https://vimhelp.org/). For a more fully developed intro to Vim, see [Learning the vi and Vim Editors](http://shop.oreilly.com/product/9780596529833.do).
 
 ## Open the editor
 
@@ -68,6 +68,10 @@ Delete five lines:
 
     5dd
 
+Delete all lines in the file/buffer:
+
+    :1,$d
+
 ## Copy and paste
 
 Copy a line to the register:
@@ -81,3 +85,13 @@ Copy 5 lines to the register:
 Paste the register after the cursor:
 
      p
+
+## Add config
+
+Create (or open) your **.vimrc**:
+
+    vim ~/.vimrc
+
+If you want some good basic config, paste in the contents of [basic.vim](https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim).
+
+Alternatively, you could start with this [minimal example](https://vim.fandom.com/wiki/Example_vimrc).
