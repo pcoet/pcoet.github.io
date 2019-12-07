@@ -15,14 +15,14 @@ The "Getting Started" section below walks you through the process of creating a 
 1. Create an app.py file: `cd <my-app> && touch app.py`
 1. Add the following code to app.py, making sure that no undesired whitespace is added:
 
-    ```python
-    name = ""
+   ```python
+   name = ""
 
-    while name == "":
-        name = str(input("What's your name?\n"))
-        if name != "":
-            print("Hello, " + name)
-    ```
+   while name == "":
+       name = str(input("What's your name?\n"))
+       if name != "":
+           print("Hello, " + name)
+   ```
 
 1. Create and activate a virtual environment:
     * `python3 -m venv venv`
@@ -44,20 +44,20 @@ Common installation tools such as Setuptools and pip work as expected with virtu
 
 Creation of virtual environments is done by executing the command venv:
 
-```python
-    python3 -m venv /path/to/new/virtual/environment
+```shell
+python3 -m venv /path/to/new/virtual/environment
 ```
 
 To activate your virtual env, run:
 
-```python
-    source <venv>/bin/activate
+```shell
+source <venv>/bin/activate
 ```
 
 To deactivate, run:
 
-```python
-    deactivate
+```shell
+deactivate
 ```
 
 You don’t specifically need to activate an environment; activation just prepends the virtual environment’s binary directory to your path, so that “python” invokes the virtual environment’s Python interpreter and you can run installed scripts without having to use their full path. However, all scripts installed in a virtual environment should be runnable without activating it, and run with the virtual environment’s Python automatically.
@@ -67,19 +67,19 @@ You don’t specifically need to activate an environment; activation just prepen
 To import a module:
 
 ```python
-    import my_module
+import my_module
 ```
 
 Also, you can import names from a module directly into the importing module’s symbol table:
 
 ```python
-    from my_module import my_func
+from my_module import my_func
 ```
 
 This imports all names except those beginning with an underscore:
 
 ```python
-    from my_module import *
+from my_module import *
 ```
 
 Note that in general the practice of importing * from a module or package is frowned upon, since it often causes poorly readable code.
@@ -89,15 +89,15 @@ For efficiency reasons, each module is only imported once per interpreter sessio
 When you run a Python module with
 
 ```python
-    python mod.py <arguments>
+python mod.py <arguments>
 ```
 
 the code in the module will be executed, just as if you imported it, but with the `__name__` set to `"__main__"`. That means that by adding something like this at the end of your module...
 
 ```python
-    if __name__ == "__main__":
-        import sys
-        some_function((sys.argv[1])
+if __name__ == "__main__":
+    import sys
+    some_function((sys.argv[1])
 ```
 
 ...you can make the file usable as a script as well as an importable module, because the code that parses the command line only runs if the module is executed as the “main” file

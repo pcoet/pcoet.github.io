@@ -25,3 +25,6 @@ plugins:
   - jekyll-paginate
 
 paginate: 3
+
+highlighter: rouge
+
