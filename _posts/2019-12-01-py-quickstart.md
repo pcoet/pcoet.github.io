@@ -3,17 +3,17 @@ title: Set up a Python environment
 category: Python
 ---
 
-*Last updated: December 2, 2019*
+*Last updated: December 8, 2019*
 
-The "Getting Started" section below walks you through the process of creating a simple Python script and setting up a virtual environment to run it in. The "Things to know" section provides additional context and other tips to get you up and running with Python.
+The "Getting Started" section below walks you through the process of creating a simple Python app and setting up a virtual environment to run it in. The "Things to know" section provides additional context and other tips to get you up and running with Python.
 
 ## Getting started ##
 
 1. Make sure you have Python 3 installed: `python3`
-    * If you don't, install it.
+    * If you don't, install it. For Mac, see [Installing Python 3 on Mac OS X](https://docs.python-guide.org/starting/install3/osx/).
 1. Create a directory for your app: `mkdir <my-app>`
 1. Create an app.py file: `cd <my-app> && touch app.py`
-1. Add the following code to app.py, making sure that no undesired whitespace is added:
+1. Add the following code to app.py:
 
    ```python
    name = ""
@@ -26,7 +26,7 @@ The "Getting Started" section below walks you through the process of creating a 
 
 1. Create and activate a virtual environment:
     * `python3 -m venv venv`
-        * If you put the app under version control in Git, you should ignore the **venv** directory.
+        * Note: If you put the app under version control in Git, you should ignore the **venv** directory.
     * `source venv/bin/activate`
 1. Run the application to see how it works: `python3 app.py`
 1. When you're finished, deactivate the environment:
@@ -40,9 +40,9 @@ The "Getting Started" section below walks you through the process of creating a 
 
 A virtual environment is a Python environment such that the Python interpreter, libraries, and scripts installed into it are isolated from those installed in other virtual environments, and (by default) any libraries installed in a “system” Python, i.e., one which is installed as part of your operating system.
 
-Common installation tools such as Setuptools and pip work as expected with virtual environments. In other words, when a virtual environment is active, they install Python packages into the virtual environment without needing to be told to do so explicitly.
+Common installation tools such as [Setuptools](https://setuptools.readthedocs.io/en/latest/) and [pip](https://pypi.org/project/pip/) work as expected with virtual environments. In other words, when a virtual environment is active, they install Python packages into the virtual environment without needing to be told to do so explicitly.
 
-Creation of virtual environments is done by executing the command venv:
+You create a virtual environment with the `venv` command:
 
 ```shell
 python3 -m venv /path/to/new/virtual/environment
@@ -82,9 +82,9 @@ This imports all names except those beginning with an underscore:
 from my_module import *
 ```
 
-Note that in general the practice of importing * from a module or package is frowned upon, since it often causes poorly readable code.
+Note that in general the practice of importing `*` from a module or package is frowned upon, since it often causes poorly readable code.
 
-For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use `importlib.reload()`, e.g. `import importlib; importlib.reload(modulename)`.
+For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change your modules, you have to restart the interpreter &mdash; or, if it’s just one module you want to test interactively, use `importlib.reload()`, e.g. `import importlib; importlib.reload(modulename)`.
 
 When you run a Python module with
 
@@ -104,7 +104,7 @@ if __name__ == "__main__":
 
 ### Packages ###
 
-Packages are a way of structuring Python’s module namespace by using “dotted module names”. For example, the module name A.B designates a submodule named B in a package named A.
+Packages are a way of structuring Python’s module namespace by using dot syntax. For example, the module name A.B designates a submodule named B in a package named A.
 
 An `__init__.py` file is required to make Python treat a directory as containing a package. In the simplest case, `__init__.py` can just be an empty file, but it can also execute initialization code for the package
 
