@@ -3,7 +3,7 @@ title: Add linting to a TypeScript project
 category: TypeScript
 ---
 
-*Last updated: December 7, 2019*
+*Last updated: January 1, 2020*
 
 This post assumes that you've already [set up a TypeScript project]({% post_url 2019-12-01-ts-quickstart %}) and [created tests]({% post_url 2019-12-02-ts-add-tests %}).
 
@@ -59,6 +59,10 @@ Using ESLint for TypeScript is a little bit more complicated than using it for v
 ## Lint!
 
 Now run the linter: `npm run lint`. You should see a warning about a "Missing return type on function" in **example.ts**. Yay! We have linting. If you fix the error (great practice if you're learning TypeScript!) and run the script again, the linter should exit successfully.
+
+## (Optional) Add airbnb
+
+You may also want to add `eslint-config-airbnb-typescript` to your project. It picks up a lot of stylistic issues that the configuration above will miss. To add the airbnb styles, [follow these steps](https://www.npmjs.com/package/eslint-config-airbnb-typescript#i-use-eslint-config-airbnb-base-no-react-support).
 
 ## Next steps
 
