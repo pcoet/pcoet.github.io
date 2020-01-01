@@ -52,7 +52,7 @@ Using ESLint for TypeScript is a little bit more complicated than using it for v
    ```json
    "scripts": {
      ...
-     "lint": "eslint **/*.ts"
+     "lint": "eslint . --ext .ts"
    },
    ```
 
@@ -62,7 +62,7 @@ Now run the linter: `npm run lint`. You should see a warning about a "Missing re
 
 ## (Optional) Add airbnb
 
-You may also want to add `eslint-config-airbnb-typescript` to your project. It picks up a lot of stylistic issues that the configuration above will miss. To add the airbnb styles, [follow these steps](https://www.npmjs.com/package/eslint-config-airbnb-typescript#i-use-eslint-config-airbnb-base-no-react-support).
+You may also want to add `eslint-config-airbnb-typescript` to your project. To add the airbnb rules, [follow these steps](https://www.npmjs.com/package/eslint-config-airbnb-typescript#i-use-eslint-config-airbnb-base-no-react-support).
 
 ## Next steps
 
