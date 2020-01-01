@@ -64,6 +64,10 @@ Now run the linter: `npm run lint`. You should see a warning about a "Missing re
 
 You may also want to add `eslint-config-airbnb-typescript` to your project. To add the airbnb rules, [follow these steps](https://www.npmjs.com/package/eslint-config-airbnb-typescript#i-use-eslint-config-airbnb-base-no-react-support).
 
+## (Optional) Enable ESLint in VS Code
+
+If you're using VS Code, you'll probably want to enable [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint). This will give you linting intellisense in the editor, so you don't have to run the linter to get feedback.
+
 ## Next steps
 
 You now have a simple TypeScript project set up. Here are some things you could do next:
