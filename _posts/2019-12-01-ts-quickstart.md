@@ -17,7 +17,7 @@ TypeScript gives you interfaces and type annotations that you can use to explici
 
 In addition to type safety, TypeScript provides support for next-gen versions of JavaScript. In fact, TypeScript is actually a superset of JavaScript. Any valid JavaScript program is also a valid TypeScript program (though your configuration might prevent vanilla JavaScript syntax from compiling without errors). The [TypeScript compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html) let you include libraries for ES2015, ES2016, ES2017, ESNext, and other proposed versions of ECMAScript. You can use features from these specifications in your source code, and then you can compile that code to a more widely supported ECMAScript target like ES3 or ES5. There are other tools available to do this, notably [Babel](https://babeljs.io/). But with TypeScript, you don't need to include Babel in your tool chain (though [TypeScript does support Babel 7](https://devblogs.microsoft.com/typescript/typescript-and-babel-7/)).
 
-There are other considertions around tooling, text editors, legacy code bases, and so on. But the basic tradeoff is that TypeScript gives you type safety and advanced language features at the cost of configuration and a steeper learning curve for JavaScript developers working with TypeScript for the first time.
+There are other considerations around tooling, text editors, legacy code bases, and so on. But the basic tradeoff is that TypeScript gives you type safety and advanced language features at the cost of configuration and a steeper learning curve for JavaScript developers working with TypeScript for the first time.
 
 Now let's see how to create a bare-bones TypeScript project.
 

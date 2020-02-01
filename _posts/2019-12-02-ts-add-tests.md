@@ -3,7 +3,7 @@ title: Add tests to a TypeScript project
 category: TypeScript
 ---
 
-*Last updated: December 6, 2019*
+*Last updated: February 1, 2019*
 
 This post assumes that you've already [set up a TypeScript project]({% post_url 2019-12-01-ts-quickstart %}). Now we'll add unit testing to the project. [Jest](https://jestjs.io/) is the go-to testing framework for JavaScript projects at the moment, so we'll use that. The [Jest API](https://jestjs.io/docs/en/api) includes global setup and testing methods (e.g. `afterAll`, `beforeEach`, `describe`) that should look familiar to users of other JavaScript testing frameworks like Jasmine and Mocha.
 
@@ -74,7 +74,7 @@ Here we have three tests to make sure that our function returns the expected res
 
 Let's run our test: `npm run test`. 
 
-You should see the successful test results in the console output.
+You should see the successful test results in the console output. Note: If there's an error indicating that Jest `describe` can't be found, you may be need to open **jest.config.js** and set `testEnvironment` to `jsdom`. If you're using an older version of Node, you may encounter problems when you try to use `import` with `testEnvironment: node`.
 
 While we're at it, let's trying building again: `npm run build`. If you look in the **dist** dir, you'll see that **example.js** is there, as expected, but the test is not. We've excluded the test from being transpiled to the build output, as we should.
 
