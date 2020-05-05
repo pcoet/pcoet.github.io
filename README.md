@@ -16,8 +16,6 @@ The site will be available at: http://localhost:4000
 
 ## TODOs
 
-* Figure out how to generate PDFs, and document here for future reference: https://wkhtmltopdf.org/
-
 ### Blog
 * Add 404.html
 * Add a tag cloud or tag index, perhaps on its own page.
