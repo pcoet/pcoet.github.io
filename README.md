@@ -15,6 +15,7 @@
 The site will be available at: http://localhost:4000
 
 ## TODOs
+* Add metadata to default template, to improve SEO.
 
 ### Blog
 * Add 404.html
