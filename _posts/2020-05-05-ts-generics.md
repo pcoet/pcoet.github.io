@@ -46,7 +46,7 @@ class Stack<T> {
 
 The first thing to notice here is the type parameter `T` in the class declaration. The type parameter is a placeholder for a type that will be provided when the class is instantiated. In this case, there are no constraints on the type, so it can be any type.
 
-Why would we want to make this class generic? Well, let's think about a stack data structure. We use a stack as an interface to a collection of items. A stack lets you push an element onto the end of the collection (i.e. the top of the stack) and pop (i.e. remove and return) an element from the top of the stack. This particular stack, which is a thin abstraction over the native JavaScript array, adds some other methods as well. When we're talking about a stack, we call the objects in the stack "items" or "elements" because we don't really care what we're putting in the stack &mdash; numbers, strings, objects, etc. Without a generic type, we'd have to either create a new `Stack` class for each type we wanted to support, or we'd have to use `any`, which is an escape hatch from the type system and causes us to lose type safety. But with a generic type parameter, we can do this:
+Why would we want to make this class generic? Well, let's think about a stack data structure. We use a stack as an interface to a collection of items. A stack lets you push an element onto the end of the collection (i.e. the top of the stack) and pop (i.e. remove and return) an element from the top of the stack. This particular stack, which is a thin abstraction over the native JavaScript array, adds some other methods as well. When we're talking about a stack, we call the objects in the stack "items" or "elements" because we don't really care what we're putting in the stack &mdash; numbers, strings, objects, etc. If we didn't have a generic type, we'd have to create a new `Stack` class for each type we wanted to support, or use `any` or `unknown`. But with a generic type parameter, we can do this:
 
 ```typescript
 const numStack: Stack<number> = new Stack();
@@ -67,14 +67,19 @@ So what happens if we just ignore the type parameter? Let's try it:
 
 ```typescript
 const anyStack = new Stack();
-let myString: string;
 anyStack.push('foo');
 anyStack.push('bar');
+```
+
+Here we created a `Stack` without passing a type argument, and then we pushed two strings onto the stack. When we pop one of the strings off of the stack, does TypeScript know that it's a string?
+
+```typescript
 const item = anyStack.pop();
+let myString: string;
 myString = item; // Type 'unknown' is not assignable to type 'string'.
 ```
 
-Here we created a `Stack` without passing a type argument, and then we pushed two strings onto the stack. When we pop one of the strings off of the stack, does TypeScript know that it's a string? No, it doesn't. Because we didn't specify a type when we instantiated the class, TypeScript infers the type to be [unknown](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html#new-unknown-top-type).
+ No, it doesn't. Because we didn't specify a type when we instantiated the class, TypeScript infers the type to be [unknown](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html#new-unknown-top-type).
 
 Our `Stack` class defines only one type parameter, `T`, but we're not limited in the number of type parameters we can define. Consider this `Entry` class:
 
@@ -193,7 +198,7 @@ const keith = new Member('Keith', 'Richards', new Date(1943, 12, 18), 114);
 const members = [mick, charlie, ronnie, keith];
 ```
 
-(By coincidence, our members share names with the members of a certain rock and roll band which is superior to the Beatles.) Now, what happens when we pass `members` to `getLargest`? 
+(By coincidence, our members share names with the members of a certain rock and roll band that is superior to the Beatles.) Now, what happens when we pass `members` to `getLargest`? 
 
 ```typescript
 const largest = getLargest(members);
@@ -212,7 +217,7 @@ Now, when `getLargest` iterates over members, it will compare their `lastName` p
 
 That works, but it's not using the type system to best advantage. If we don't remember to override `valueOf` on any non-primitive type that we use with `getLargest`, we're likely to get a result that doesn't make sense. A better way to handle this scenario would be to constrain the type, using the `extends` keyword and an interface. 
 
-Using a TypeScript interface, we can define the shape of an object. We can then use the interface to constrain the type of a function. This let's us know something in advance about the type the function is operating on. Say, for example, we wanted to find the oldest member in an array of `Member` objects. One way to do that, not using a constrained generic type, would be like this: 
+Using a TypeScript interface, we can define the shape of an object. We can then use the interface to constrain the type of a function. This lets us know something in advance about the type the function is operating on. Say, for example, we wanted to find the oldest member in an array of `Member` objects. One way to do that, not using a constrained generic type, would be like this: 
 
 ```typescript
 function getOldest(arr: Member[]): Member {
