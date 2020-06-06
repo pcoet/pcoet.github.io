@@ -1,9 +1,8 @@
 ---
 title: Set up a Python environment
 category: Python
+last_updated: December 8, 2019
 ---
-
-*Last updated: December 8, 2019*
 
 The "Getting Started" section below walks you through the process of creating a simple Python app and setting up a virtual environment to run it in. The "Things to know" section provides additional context and other tips to get you up and running with Python.
 

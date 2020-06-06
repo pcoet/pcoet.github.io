@@ -1,9 +1,8 @@
 ---
 title: Add tests to a TypeScript project
 category: TypeScript
+last_updated: February 1, 2019
 ---
-
-*Last updated: February 1, 2019*
 
 This post assumes that you've already [set up a TypeScript project]({% post_url 2019-12-01-ts-quickstart %}). Now we'll add unit testing to the project. [Jest](https://jestjs.io/) is the go-to testing framework for JavaScript projects at the moment, so we'll use that. The [Jest API](https://jestjs.io/docs/en/api) includes global setup and testing methods (e.g. `afterAll`, `beforeEach`, `describe`) that should look familiar to users of other JavaScript testing frameworks like Jasmine and Mocha.
 

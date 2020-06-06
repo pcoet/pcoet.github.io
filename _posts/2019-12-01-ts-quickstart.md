@@ -1,9 +1,8 @@
 ---
 title: Set up a TypeScript project
 category: TypeScript
+last_updated: December 7, 2019
 ---
-
-*Last updated: December 7, 2019*
 
 This post explains how to set up a simple TypeScript project. The first section offers some thoughts on why you might want to use TypeScript over plain old JavaScript. If you're all in with TypeScript already, feel free to skip ahead.
 

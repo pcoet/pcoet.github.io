@@ -1,9 +1,8 @@
 ---
 title: Vim cookbook
 category: Unix/Linux
+last_updated: December 8, 2019
 ---
-
-*Last updated: December 8, 2019*
 
 This post documents useful commands for working with the [Vim text editor](https://www.vim.org/). Some of this content is adapted from the [Vim help pages](https://vimhelp.org/). For a more fully developed intro to Vim, see [Learning the vi and Vim Editors](http://shop.oreilly.com/product/9780596529833.do).
 
