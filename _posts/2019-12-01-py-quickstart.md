@@ -4,7 +4,7 @@ category: Python
 last_updated: June 7, 2020
 ---
 
-This post explains how to create a new Python environment using [Conda](https://docs.conda.io/en/latest/) and how to install [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/index.html) in that environment.
+This post explains how to create a Python environment using [Conda](https://docs.conda.io/en/latest/) and how to install [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/index.html) in that environment.
 
 ## What is Conda?
 
@@ -12,9 +12,9 @@ Conda is a package and environment management tool and an alternative to [virtua
 
 ## Update or install Conda
 
-If you don't already have Conda, you'll need to install it. It comes packaged with Anaconda, which includes more than 1500 scientific libraries, or with Miniconda, which is a lightweight version of Anaconda that includes Python, Conda, and a much smaller set of libraries.
+If you don't already have Conda, you'll need to install it. It's available as part of the full Anaconda distribution, which includes Python and more than 200 libraries, or as part of Miniconda, which is a lightweight version of Anaconda that includes Python and a minimal set of libraries.
 
-To get started, I'd recommend [installing Miniconda](https://docs.conda.io/en/latest/miniconda.html). Also, if you don't have a specific reason to use Python 2, install the Python 3.* version.
+If you're not sure which distro to use, start by [installing Miniconda](https://docs.conda.io/en/latest/miniconda.html). Also, if you don't have a specific reason to use Python 2, install the Python 3 version.
 
 Once you have Conda installed, you can update it by running:
 
@@ -34,13 +34,17 @@ To see a list of environments, run:
 
     conda env list
 
-A new Conda installation includes a **base** environment. You should create additional environments for your actual programming.
+A new Conda installation includes a **base** environment. You should create additional environments for your actual projects.
 
 ## Create an environment
 
 To create a new environment, run:
 
-    conda create --name <envname> python=3.7
+    conda create --name <envname> python=<major-version>.<minor-version>
+
+For example:
+
+    conda create --name my_env python=3.7
 
 ## Activate the environment
 
@@ -48,7 +52,7 @@ To activate the environment, run:
 
     conda activate <envname>
 
-With the environment activated, the python binary from your Miniconda (or Anaconda) distribution should be available. If you run `python --version`, you should see the version you specified in creating the environment, e.g. 3.7.
+With the environment activated, the Python binary should be available. If you run `python --version`, you should see the version you specified in creating the environment, e.g. 3.7.
 
 ## Install JupyterLab
 
