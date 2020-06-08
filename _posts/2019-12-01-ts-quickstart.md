@@ -4,19 +4,19 @@ category: TypeScript
 last_updated: December 7, 2019
 ---
 
-This post explains how to set up a simple TypeScript project. The first section offers some thoughts on why you might want to use TypeScript over plain old JavaScript. If you're all in with TypeScript already, feel free to skip ahead.
+This post explains how to set up a simple TypeScript project. The first section offers some thoughts on why you might want to use TypeScript over plain old JavaScript. If you're already familiar with TypeScript, feel free to skip ahead.
 
 ## Why TypeScript?
 
-Depending on your tooling, using TypeScript can take more initial setup than using vanilla JavaScript &mdash; especially if you're planning to run the code with Node.js on the server, and you don't actually need transpilation. And if you haven't worked with TypeScript before, there's extra learning to do, also. So why would you want to use it?
+Depending on your tooling, using TypeScript can take more initial setup than using vanilla JavaScript. And if you haven't worked with TypeScript before, there's extra learning to do, also. So why would you want to use it?
 
 JavaScript is a dynamically typed language. Any type checking that gets done in JavaScript gets done at runtime, and this can be a source of bugs. TypeScript provides static typing and analysis for JavaScript. When you run the TypeScript compiler on your source code, it can find potential runtime errors before your users do.
 
-TypeScript gives you interfaces and type annotations that you can use to explicitly tell the compiler the types of values in your code. It also provides type inference, so that the compiler can "guess" what a type should be. Using this information, TypeScript can analyze your code and throw an error if, for example, you're passing a value that could be a string *or* a boolean to a function that is expecting only a string.
+TypeScript gives you interfaces and type annotations that you can use to explicitly tell the compiler the types of values in your code. It also provides type inference, so that the compiler can "guess" what a type should be. Using this information, TypeScript can analyze your code and throw an error if, for example, you're passing a value that could be a string *or* undefined to a function that is expecting only a string. Moreover, TypeScript tooling can use type information to improve intelligent code completion and other aspects of the developer experience.
 
-In addition to type safety, TypeScript provides support for next-gen versions of JavaScript. In fact, TypeScript is actually a superset of JavaScript. Any valid JavaScript program is also a valid TypeScript program (though your configuration might prevent vanilla JavaScript syntax from compiling without errors). The [TypeScript compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html) let you include libraries for ES2015, ES2016, ES2017, ESNext, and other proposed versions of ECMAScript. You can use features from these specifications in your source code, and then you can compile that code to a more widely supported ECMAScript target like ES3 or ES5. There are other tools available to do this, notably [Babel](https://babeljs.io/). But with TypeScript, you don't need to include Babel in your tool chain (though [TypeScript does support Babel 7](https://devblogs.microsoft.com/typescript/typescript-and-babel-7/)).
+In addition to type safety, TypeScript provides support for next-gen versions of JavaScript. The [TypeScript compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html) let you include libraries for ES2015, ES2016, ES2017, ESNext, and other proposed versions of ECMAScript. You can use features from these specifications in your source code, and then compile that code to a more widely supported ECMAScript target like ES3 or ES5. There are other tools available to do this, notably [Babel](https://babeljs.io/). But with TypeScript, you don't need to include Babel in your tool chain (though [TypeScript does support Babel 7](https://devblogs.microsoft.com/typescript/typescript-and-babel-7/)).
 
-There are other considerations around tooling, text editors, legacy code bases, and so on. But the basic tradeoff is that TypeScript gives you type safety and advanced language features at the cost of configuration and a steeper learning curve for JavaScript developers working with TypeScript for the first time.
+There are other considerations around tooling, text editors, legacy code bases, and so on. But the basic tradeoff is that TypeScript gives you type safety, enhanced tooling, and advanced language features at the cost of configuration and a steeper learning curve for JavaScript developers working with TypeScript for the first time.
 
 Now let's see how to create a bare-bones TypeScript project.
 

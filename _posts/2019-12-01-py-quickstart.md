@@ -14,7 +14,7 @@ Conda is a package and environment management tool and an alternative to [virtua
 
 If you don't already have Conda, you'll need to install it. It's available as part of the full Anaconda distribution, which includes Python and more than 200 libraries, or as part of Miniconda, which is a lightweight version of Anaconda that includes Python and a minimal set of libraries.
 
-If you're not sure which distro to use, start by [installing Miniconda](https://docs.conda.io/en/latest/miniconda.html). Also, if you don't have a specific reason to use Python 2, install the Python 3 version.
+Unless you need a fully provisioned data science environment out of the box, [install Miniconda](https://docs.conda.io/en/latest/miniconda.html). Also, if you don't have a specific reason to use Python 2, install the Python 3 version.
 
 Once you have Conda installed, you can update it by running:
 
