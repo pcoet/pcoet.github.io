@@ -5,7 +5,7 @@ category: Go
 
 This post explains how to quickly set up a Go project. Some of the content is adapted from the official documentation on [How to Write Go Code](https://golang.org/doc/code.html). If you're new to Go, that's worth reading.
 
-The steps below assume that you'll host your repo on GitHub.
+The steps below assume that you'll eventually publish your Go module to a GitHub repository. To learn about working with GitHub repositories, see the official GitHub docs on [Creating, cloning, and archiving repositories](https://help.github.com/en/github/creating-cloning-and-archiving-repositories).
 
 ## Install Go
 
@@ -13,11 +13,11 @@ If you haven't already, [install the Go tools](https://golang.org/doc/install).
 
 ## Create a project
 
-If you plan to host your project on GitHub, you probably want to start by creating a Go project there and cloning it. Alternatively, you can create the project root locally, replacing **myproj** with whatever name you want for your project:
+If you're creating a new project, you can start by creating and cloning a new GitHub repo. Alternatively, you can create the project root locally, replacing **myproj** with whatever name you want for your project:
 
     mkdir myproj && cd myproj
 
-Once you've cloned or created the new project, create a new module in the root directory as shown below, replacing **myuser** and **myproj** with your GitHub user and the name of the repo:
+Once you've cloned the repo or created the directory, create a new module in the root directory as shown below, replacing **myuser** and **myproj** with your GitHub user and the name of the repo:
 
     go mod init github.com/myuser/myproj
 
