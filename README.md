@@ -2,26 +2,36 @@
 
 ## Install
 
-    bundle install
+    python3 -m venv mkdocs-env
+    source mkdocs-env/bin/activate
+    pip install mkdocs-material
+
+## Activate
+
+    source mkdocs-env/bin/activate
+
+## Deactivate
+
+    deactivate
 
 ## Build
 
-    bundle exec jekyll build
+    mkdocs build
 
 ## Serve
 
-    bundle exec jekyll serve
-
-The site will be available at: http://localhost:4000
+    mkdocs serve
 
 ## TODOs
-* Add metadata to default template, to improve SEO.
 
-### Blog
-* Add 404.html
-* Add a tag cloud or tag index, perhaps on its own page.
-* Improve orrdering on contents page.
-* Consider adding in blog sidebar elements, as shown [here](https://getbootstrap.com/docs/3.4/examples/blog/).
+* Set up navigation: https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
+* Port the content: https://github.com/pcoet/pcoet.github.io
+* Set up tags: https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
+* Publish to GitHub: https://squidfunk.github.io/mkdocs-material/publishing-your-site/#github-pages
+* Join Bluesky, Fosstodon, and X.
+* Learn mkdocs: https://www.mkdocs.org/
+* Enable navigation tabs after you have docs subdirectories (the config is
+  currently commented out in `mkdocs.yml`).
 
 ### Topics
 * Machine learning

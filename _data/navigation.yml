@@ -1,8 +1,0 @@
-- name: Blog
-  link: /
-- name: About
-  link: /about.html
-- name: Contents
-  link: /toc.html
-- name: TypeScript
-  link: /full-stack-typescript.html
