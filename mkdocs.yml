@@ -1,5 +1,5 @@
 site_name: pcoet notes
-site_url: https://pcoet.github.io
+site_url: https://pcoet.github.io/
 nav:
   - index.md
   - about.md
