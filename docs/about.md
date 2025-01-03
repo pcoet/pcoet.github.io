@@ -2,8 +2,12 @@
 
 ## About the author
 
-I'm a programmer and technical writer based in Seattle. Currently, I'm
-interested in front-end development, algorithms, and machine learning.
+I'm a programmer and technical writer based in the Seattle area. Currently, I'm
+interested in front-end development, functional programming, algorithms, formal
+languages, natural languages, and machine learning. I studied English literature
+in college and got interested in computer programming later in life. I'm still
+pretty fired up about it. For the last couple of years, I've done most of my
+programming in TypeScript, Go, or Python.
 
 ## About the content
 
