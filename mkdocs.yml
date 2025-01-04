@@ -1,10 +1,5 @@
 site_name: pcoet notes
 site_url: https://pcoet.github.io/
-nav:
-  - index.md
-  - about.md
-  - Blog:
-    - blog/index.md
 theme:
   name: material
   palette: 
@@ -42,3 +37,10 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+nav:
+  - index.md
+  - about.md
+  - Blog:
+    - blog/index.md
+  - Tutorials:
+    - tutorials/go-quickstart.md
