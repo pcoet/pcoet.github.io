@@ -44,3 +44,4 @@ nav:
     - blog/index.md
   - Tutorials:
     - tutorials/go-quickstart.md
+    - tutorials/ts-quickstart.md
