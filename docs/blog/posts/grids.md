@@ -3,6 +3,8 @@ date: 2020-04-11
 categories:
   - CSS
   - web development
+tags:
+  - web development
 ---
 
 # An intro to grids

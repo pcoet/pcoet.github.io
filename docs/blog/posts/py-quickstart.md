@@ -3,6 +3,8 @@ draft: false
 date: 2019-12-01
 categories:
   - Python
+tags:
+  - Python
 ---
 
 # Set up a Python environment

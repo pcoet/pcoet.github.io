@@ -1,3 +1,8 @@
+---
+tags:
+  - Go
+---
+
 # Go quickstart
 
 This tutorial shows you how to set up a basic Go project that includes a command

@@ -2,6 +2,8 @@
 date: 2020-05-05
 categories:
   - TypeScript
+tags:
+  - TypeScript
 ---
 
 # Using TypeScript generics

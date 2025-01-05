@@ -29,6 +29,8 @@ extra:
     property: G-CQ0K5Y4PRE
 plugins:
   - blog
+  - tags:
+      tags_file: index.md
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true

@@ -1,3 +1,8 @@
+---
+tags:
+  - TypeScript
+---
+
 # TypeScript quickstart
 
 This tutorial shows you how to set up a TypeScript project for backend (i.e.

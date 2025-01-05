@@ -22,6 +22,13 @@
 
     mkdocs serve
 
+## Publish
+
+The docs are automatically published when you push to main. Alternatively, you
+can run:
+
+    mkdocs gh-deploy --force
+
 ## TODOs
 
 * Set up tags: https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
