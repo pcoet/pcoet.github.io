@@ -31,7 +31,6 @@ can run:
 
 ## TODOs
 
-* Set up tags: https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
 * Learn mkdocs:
   * https://www.mkdocs.org/
   * https://squidfunk.github.io/mkdocs-material/

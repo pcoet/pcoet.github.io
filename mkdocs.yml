@@ -47,3 +47,4 @@ nav:
   - Tutorials:
     - tutorials/go-quickstart.md
     - tutorials/ts-quickstart.md
+    - tutorials/py-quickstart.md
