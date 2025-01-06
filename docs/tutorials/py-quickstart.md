@@ -5,23 +5,24 @@ tags:
 
 # Python quickstart
 
-This tutorial shows you how to set up a Python virtual environment on macOS
-using [venv](https://docs.python.org/3/library/venv.html). 
-
-## Upgrade Python
+This tutorial shows you how to use
+[venv](https://docs.python.org/3/library/venv.html) to set up a Python virtual
+environment on macOS.
 
 To complete this tutorial, you need Python 3.3 or higher. To check your Python
 version, run
 
     python3 --version
 
-If you're using the default macOS version of Python, consider installing a more
-recent version. If you have [Homebrew](https://brew.sh/), you
-can install Python like this:
+## (Optional) Upgrade Python
+
+You might want to upgrade your version of Python before creating a virtual
+environment. If you have [Homebrew](https://brew.sh/), you can install a
+recent version of Python using this command:
 
     brew install python
 
-To upgrade a Homebrew version of Python, run
+To upgrade a Homebrew version of Python, run the following command:
 
     brew upgrade python
 
@@ -31,42 +32,44 @@ Alternatively, you can download the most recent version of Python from the
 ## Create a virtual environment
 
 Run the following command in your project directory, replacing
-`quickstart-env` with the name you want to use for your virtual environment:
+`<quickstart-env>` with the name you want to use for your virtual environment:
 
-    python3 -m venv quickstart-env
+    python3 -m venv <quickstart-env>
 
 ## Activate the virtual environment
 
-    source quickstart-env/bin/activate
+To activate the virtual environment, run the following command, replacing
+`<quickstart-env>` with the name you used for your virtual environment:
 
-Now you can use the `python` command, rather than `python3`. For example:
+    source <quickstart-env>/bin/activate
+
+Now you can use the `python` command, rather than `python3`:
 
     python --version
 
 The `python` alias points to whatever version of Python you used to create the
 virtual environment.
 
-## (Optional) Install a dependency
+## (Optional) Install dependencies
 
 With your virtual environment activated, you can use `pip` (instead of `pip3`)
-to install a dependency that's only available in the virtual environment. For
+to install dependencies that are only available in the virtual environment. For
 example:
 
     pip install pydantic
 
 The library files will be installed in your virtual environment in a location
-like this: `<my-env>/lib/python3.<XX>/site-packages/pydantic`. 
+like `<quickstart-env>/lib/python3.<XX>/site-packages/pydantic`. 
 
 ## (Optional) Create `requirements.txt`
 
-To ensure that all users of your package have the same dependency versions, you
-can create a `requirements.txt` file:
+If you want your users to have the same dependencies that you do in your virtual
+environment, you can create a `requirements.txt` file that specifies dependency
+versions:
 
     python -m pip freeze > requirements.txt
 
-The `requirements.txt` file specifies the dependencies for your project.
-If you distribute `requirements.txt`, users can install the exact dependency
-versions you're using in your virtual environment:
+Users can install these dependencies with the following command:
 
     python -m pip install -r requirements.txt
 
@@ -89,6 +92,7 @@ You can configure VS Code to use the Python version in your virtual environment.
 To learn more, see
 [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python#_environments).
 
-To learn more about virtual environments, see
-[Virtual Environments and Packages](https://docs.python.org/3/tutorial/venv.html)
-and the [venv library docs](https://docs.python.org/3/library/venv.html).
+To learn more about virtual environments, see the following resources:
+
+* [Virtual Environments and Packages](https://docs.python.org/3/tutorial/venv.html)
+* [venv — Creation of virtual environments](https://docs.python.org/3/library/venv.html)

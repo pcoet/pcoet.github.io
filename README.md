@@ -51,7 +51,9 @@ can run:
   * ts-quickstart.md
     * Add a callout pointing to the new TypeScript quickstart tutorial.
   * vim-cookbook.md
-* Create a Python quickstart.
+* Review tutorials:
+  * go-quickstart.md
+  * ts-quickstart.md
 * Create a Jupyter tutorial.
 * Create a blog post on functional programming.
 
