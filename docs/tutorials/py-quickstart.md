@@ -63,9 +63,9 @@ like `<quickstart-env>/lib/python3.<XX>/site-packages/pydantic`.
 
 ## (Optional) Create `requirements.txt`
 
-If you want your users to have the same dependencies that you do in your virtual
-environment, you can create a `requirements.txt` file that specifies dependency
-versions:
+If you want your users to have the same dependencies that you have in your
+virtual environment, you can create a `requirements.txt` file that specifies
+dependency versions:
 
     python -m pip freeze > requirements.txt
 
