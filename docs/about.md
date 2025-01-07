@@ -23,5 +23,5 @@ interested in programming languages, web development, functional programming,
 algorithms, and machine learning. I studied English literature in college and
 got interested in computer programming later in life. Working with code is now
 part of my job, and writing code has provided me with new outlets for creativity
-and opportunities for research. For the last couple of years, I've done most of
+and opportunities for learning. For the last couple of years, I've done most of
 my coding in TypeScript, Go, and Python.
