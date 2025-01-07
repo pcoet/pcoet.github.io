@@ -55,5 +55,5 @@ can run:
   * go-quickstart.md
   * ts-quickstart.md
 * Create a Jupyter tutorial.
-* Create a blog post on functional programming.
+* Create a series of blog posts on functional programming.
 
