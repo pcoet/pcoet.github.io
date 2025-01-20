@@ -8,13 +8,8 @@ tags:
 
 # Python list comprehensions
 
-This post provides examples of working with list comprehensions in Python.
-According to [PEP 202](https://peps.python.org/pep-0202/), list comprehensions
-"allow conditional construction of list literals using for and if clauses"; they
-"provide a more concise way to create lists" than "`map()` and `filter()` and/or
-nested loops."
-
-The examples are adapted from the
+This post provides examples of working with list comprehensions in Python. The
+examples are adapted from the
 [official Python docs](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions).
 
 ## Generate a list
@@ -79,4 +74,5 @@ print(transposed_seqs) # [[0, 0, 2], [1, 1, 3], [2, 1, 5], [3, 2, 7], [4, 3, 11]
 To learn more about list comprehensions, see the following resources:
 
 * [Wikipedia: List comprehension](https://en.wikipedia.org/wiki/List_comprehension)
+* [PEP 202](https://peps.python.org/pep-0202/)
 * [Real Python: When to Use a List Comprehension in Python](https://realpython.com/list-comprehension-python/)
