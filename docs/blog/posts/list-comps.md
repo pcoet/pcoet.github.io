@@ -8,14 +8,32 @@ tags:
 
 # Python list comprehensions
 
-This post provides examples of working with list comprehensions in Python. The
-examples are adapted from the
+*Last updated: January 20, 2025*
+
+This post provides a quick introduction to working with list comprehensions in
+Python. List comprehensions let you create lists using a concise syntax that
+resembles mathematical set builder notation. The basic syntax looks like this:
+
+```python
+new_list = [f(x) for x in old_list if some_condition]
+```
+
+`f(x)` is an optional function applied to each element in the list, and
+`some_condition` is an optional condition for filtering items in the list.
+
+If you're coming to Python from another language, you might not think to use
+list comprehensions in many cases, because building out a list in a `for` loop
+is more familiar. But list comprehensions are a concise, readable, and very
+Pythonic tool worth having in the toolkit.
+
+The following examples are adapted from the
 [official Python docs](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions).
 
 ## Generate a list
 
-The following example uses list comprehension syntax to generate a list of
-cubes.
+This example uses list comprehension syntax and the built-in
+[`range()` type](https://docs.python.org/3/library/stdtypes.html#range)
+to generate a list of cubes.
 
 ```python
 cubes = [n**3 for n in range(10)]
