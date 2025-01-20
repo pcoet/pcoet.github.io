@@ -74,5 +74,5 @@ print(transposed_seqs) # [[0, 0, 2], [1, 1, 3], [2, 1, 5], [3, 2, 7], [4, 3, 11]
 To learn more about list comprehensions, see the following resources:
 
 * [Wikipedia: List comprehension](https://en.wikipedia.org/wiki/List_comprehension)
-* [PEP 202](https://peps.python.org/pep-0202/)
+* [PEP 202 &ndash; List Comprehensions](https://peps.python.org/pep-0202/)
 * [Real Python: When to Use a List Comprehension in Python](https://realpython.com/list-comprehension-python/)
