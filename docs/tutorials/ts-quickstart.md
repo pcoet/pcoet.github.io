@@ -235,3 +235,31 @@ consider setting up your dev environment with [Vite](https://vite.dev/), which
 [supports TypeScript](https://vite.dev/guide/features.html#typescript) and
 includes several TypeScript templates for
 [scaffolding your project](https://vite.dev/guide/#scaffolding-your-first-vite-project).
+
+## Troubleshooting
+
+### Suppress hybrid module warning
+
+You might see the following warning when you build your project:
+
+    (WARN) message TS151002: Using hybrid module kind (Node16/18/Next) is only
+    supported in "isolatedModules: true". Please set "isolatedModules: true" in
+    your tsconfig.json. To disable this message, you can set
+    "diagnostics.ignoreCodes" to include 151002 in your ts-jest config. See
+    more at
+    https://kulshekhar.github.io/ts-jest/docs/getting-started/options/diagnostics
+
+You can suppress the warning by updating `transform` in `jest.config.js`:
+
+```javascript
+transform: {
+  '\\.[jt]sx?$': [
+    'ts-jest',
+    {
+      diagnostics: {
+        ignoreCodes: [151002],
+      },
+    },
+  ],
+},
+```
