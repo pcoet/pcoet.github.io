@@ -53,7 +53,7 @@ Also specify the module type, so that you can use ESM imports:
 
 Install dependencies using the `--save-dev` flag:
 
-    npm install --save-dev @eslint/js @swc/cli @swc/core @types/eslint__js @types/jest eslint jest prettier ts-jest typescript typescript-eslint
+    npm install --save-dev @eslint/js @swc/cli @swc/core @types/jest eslint jest prettier ts-jest typescript typescript-eslint
 
 ## Configure TypeScript
 
@@ -103,14 +103,17 @@ export default {
 Create an `eslint.config.js` file and add the following content:
 
 ```javascript
+// @ts-check
+
 import eslint from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
 
-export default tseslint.config(
+export default defineConfig(
   eslint.configs.recommended,
-  ...tseslint.configs.recommended,
-  ...tseslint.configs.stylistic,
+  tseslint.configs.strict,
+  tseslint.configs.stylistic,
   {
     languageOptions: {
       globals: {
