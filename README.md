@@ -39,6 +39,7 @@ can run:
 
 ### Content
 
+* Create `tutorials/index.md`.
 * Review old blog posts:
   * go-quickstart.md
   * grids.md
